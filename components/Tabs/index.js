@@ -12,7 +12,7 @@ axios
 .get("https://lambda-times-backend.herokuapp.com/topics")
 .then(response => {
     const topics = document.querySelector(".topics");
-	return res.data.topics.map(topic => {
+	return response.data.topics.map(topic => {
 	return topics.appendChild(createTab(topic));
 	});
 })
